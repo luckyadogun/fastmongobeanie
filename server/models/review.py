@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from beanie import Document, Link
+from beanie import Document, Link, PydanticObjectId
 from pydantic import BaseModel
 from typing import Optional
 
@@ -13,7 +13,7 @@ class ProductReview(Document):
     rating: float
     review: str
     date: datetime = datetime.now()
-    author_id: Optional[str]
+    author_id: Optional[PydanticObjectId]
 
     class Settings:
         name = "product_reviews"

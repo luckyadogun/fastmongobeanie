@@ -1,7 +1,5 @@
 from beanie import init_beanie
-import asyncio
 import motor.motor_asyncio
-from authx import Authentication, MongoDBBackend
 
 from server.models.user import User
 from server.models.review import ProductReview
